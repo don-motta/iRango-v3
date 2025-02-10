@@ -23,7 +23,7 @@ else:
     print(f'O erro foi {response.status_code}')
 
 #Criar um arquivo JSON com os dados do restaurante
-for name_restaurant, data in data_restaurant.items():  
-    name_file = f'{name_restaurant}.json'
-    with open(name_file, 'w') as file_restaurant:
+for name_restaurant, data in data_restaurant.items():  #Para cada 'name_restaurant' no dicionário 'data_restaurants', vou pegar os items e salvar em'data'.
+    name_file = f'{name_restaurant}.json'  #Concatena o nome que será utilizado para o arquivo.
+    with open(name_file, 'w') as file_restaurant:  #'w' significa "write", o que sera feito com o arquivo.
         json.dump(data, file_restaurant, indent=4)
